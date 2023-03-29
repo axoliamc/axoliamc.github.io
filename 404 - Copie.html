@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Axolia | Erreur 404</title>
+
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="./favicon.png"/>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<header>
+
+<div class="topmenu">
+<a href="./"><img src="./axoliatext.png" class="logoaxo"></a>
+</nav>
+<button class="ip" onclick="ipcopy()" style="cursor: pointer;" title="Cliquez pour copier l'IP">???</button>
+<a href="./play"><button class="play">Jouer</button></a>
+
+<nav class="theme-switch-wrapper">
+  <em>Thème :</em>
+    <label for="themecheck" class="theme-switch">
+      <input type="checkbox" id="themecheck"/>
+      <div class="slider round"></div>
+    </label>
+</div>
+
+<menu id="stmartmenu">
+    <label for="mbl">
+        <i class="fa fa-bars" id="bar" onclick="menu()"></i>
+        <i class="fa fa-close" id="close" onclick="menu2()"></i>
+    </label>
+    <input type="checkbox" id="mbl" role="button">
+      <ul>
+        <li><a></a></li>
+          <li><a href="./store" class="parent">Boutique</a><div class="baronglet"></div></li>
+          <li><a href="./support" class="parent">Support</a><div class="baronglet"></div></li>
+          <li><a href="./wiki" class="parent">Wiki</a><div class="baronglet"></div></li>
+          <li><a href="https://news-axoliamc.blogspot.com/" class="parent">News</a><div class="baronglet"></div></li>
+          <li><a href="./" class="parent">Accueil</a><div class="baronglet"></div></li>
+        </li>
+      </ul>
+      <div class="menugradient"></div>
+</menu>
+</header>
+</head>
+<body>
+  <div class="center">
+    <center>
+      <h1 class="h1big">Erreur 404</h1>
+      <p>La page que vous cherchez n'existe plus ou n'existe pas encore</p>
+    </center>
+  </div>
+  <img id="axolohi" src="./axolo404.gif">
+</body>
+
+<style>
+#axolohi{
+  height: 120px;
+  position: absolute;
+  z-index: 2;
+}
+@media screen and (max-width: 728px){
+  #axolohi{
+    height: 90px;
+  }
+}
+</style>
+<script type="text/javascript">document.body.style.overflow = 'hidden';</script>
+<script src="./main.js"></script>
+<script>
+  document.getElementById("axolohi").style = "top: -15px; left: -15px; rotate: 135deg;"
+window.onload = anim404();
+
+function anim404(){
+    var pos = Math.floor(Math.random() * 4)
+    if (pos === 0){
+        pos1();
+    } else if(pos === 1){
+        pos2();
+    } else if(pos === 2){
+        pos3();
+    } else if(pos === 3){
+        pos4()
+    }
+}
+
+function pos1(){
+    document.getElementById("axolohi").style = "top: -15px; left: -15px; rotate: 135deg;"
+    setTimeout(function(){
+        anim404();
+    },1500);
+}
+function pos2(){
+    document.getElementById("axolohi").style = "bottom: -15px; left: -15px; rotate: 45deg;"
+    setTimeout(function(){
+        anim404();
+    },1500);
+}
+function pos3(){
+    document.getElementById("axolohi").style = "bottom: -15px; right: -15px; rotate: -45deg;"
+    setTimeout(function(){
+        anim404();
+    },1500);
+}
+function pos4(){
+    document.getElementById("axolohi").style = "top: -15px; right: -15px; rotate: -135deg;"
+    setTimeout(function(){
+        anim404();
+    },1500);
+}
+</script>
+</html>
