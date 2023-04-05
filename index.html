@@ -61,8 +61,43 @@
 </menu>
 </header>
 </head>
+<style>
+  @keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 34.2%;
+  }
+}
+.progressbar{
+  margin-top: 7px;
+  height: 12px;
+  width: 100%;
+  background: #fff;
+  border-radius: 25px;
+}
+.progressbar > span {
+  display: block;
+  width: 34.2%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #ee6180;
+  position: relative;
+  overflow: hidden;
+  animation-name: expandWidth;
+  animation-timing-function: ease-out;
+  animation-duration: 0.7s;
+}
+</style>
 <body>
-    <h1 class="center h1big">Prochainement...</h1>
+  <div class="center">
+    <center>
+      <h1 class="h1big">Prochainement...</h1>
+      <h2>Avancement du projet : 34,2%</h2>
+    </center>
+    <div class="progressbar"><span></span></div>
+  </div>
 </body>
 
 <script src="./main.js"></script>
