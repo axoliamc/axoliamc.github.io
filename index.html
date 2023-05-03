@@ -25,6 +25,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/png" href="./favicon.png"/>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.onload = function progressbar(){document.getElementById("progressbar").classList.add("startanim");}</script>
 
 <header>
 
@@ -70,14 +71,14 @@
     width: 34.2%;
   }
 }
-.progressbar{
+#progressbar{
   margin-top: 7px;
   height: 12px;
   width: 100%;
   background: #fff;
   border-radius: 25px;
 }
-.progressbar > span {
+#progressbar > span {
   display: block;
   width: 34.2%;
   height: 100%;
@@ -85,6 +86,8 @@
   background-color: #ee6180;
   position: relative;
   overflow: hidden;
+}
+.startanim > span{
   animation-name: expandWidth;
   animation-timing-function: ease-out;
   animation-duration: 0.7s;
@@ -96,7 +99,7 @@
       <h1 class="h1big">Prochainement...</h1>
       <h2>Avancement du projet : 34,2%</h2>
     </center>
-    <div class="progressbar"><span></span></div>
+    <div id="progressbar"><span></span></div>
   </div>
 </body>
 
