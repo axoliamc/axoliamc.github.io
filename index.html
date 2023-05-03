@@ -63,7 +63,7 @@
 </header>
 </head>
 <style>
-  @keyframes expandWidth {
+@keyframes expandWidth {
   0% {
     width: 0;
   }
@@ -78,19 +78,19 @@
   background: #fff;
   border-radius: 25px;
 }
-#progressbar > span {
-  display: block;
+.startanim > span{
+  animation-name: expandWidth;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
   width: 34.2%;
+  display: block;
+}
+#progressbar > span {
   height: 100%;
   border-radius: 20px;
   background-color: #ee6180;
   position: relative;
   overflow: hidden;
-}
-.startanim > span{
-  animation-name: expandWidth;
-  animation-timing-function: ease-out;
-  animation-duration: 0.7s;
 }
 </style>
 <body>
